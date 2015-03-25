@@ -8,17 +8,6 @@ public class Thing {
   color clr;
   boolean ranged;
   
-  // Range ()
-  // - calculate range (for collision check)
-  private void range() {
-    if(ranged) return;
-    x0 = x - 0.5*width;
-    x1 = x + 0.5*width;
-    y0 = y - 0.5*width;
-    y1 = y + 0.5*width;
-    ranged = true;
-  }
-  
   // Thing (x, y)
   // - create a thing
   public Thing(float x, float y, float width, float height, color clr) {
@@ -27,6 +16,17 @@ public class Thing {
     this.width = width;
     this.height = height;
     this.clr = clr;
+  }
+  
+  // Range ()
+  // - calculate range (for collision check)
+  public void range() {
+    if(ranged) return;
+    x0 = x - 0.5*width;
+    x1 = x + 0.5*width;
+    y0 = y - 0.5*width;
+    y1 = y + 0.5*width;
+    ranged = true;
   }
   
   // X (val)
@@ -84,6 +84,8 @@ public class Thing {
     return xc && yc; 
   }
   
+  // Draw ()
+  // - draw thing
   public void draw() {
     fill(clr);
     rect(x, y, width, height);

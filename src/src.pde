@@ -5,7 +5,8 @@ void setup() {
 }
 
 void draw() {
-  Thing t = new Thing(mouseX, mouseY, 20, 10, 100);
+  background(255);
+  Thing t = new Message(mouseX, mouseY, 30, 20, 100).val("Hello").draw(true);
   t.draw();
 }
 
