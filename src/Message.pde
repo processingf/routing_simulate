@@ -6,7 +6,7 @@ public class Message extends Thing {
   boolean draw;
   
   // Message (x, y, width, height, clr)
-  // - create message
+  // - create a message
   public Message(float x, float y, float width, float height, color clr) {
     super(x, y, width, height, clr);
   }
