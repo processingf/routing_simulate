@@ -25,7 +25,8 @@ public class Node implements Drawable {
   }
   
   public boolean collides(Node n) {
-    return (x1);
+    return false;
+  }
   
   public void draw() {
     
