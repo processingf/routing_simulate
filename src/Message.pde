@@ -2,9 +2,9 @@
 public class Message extends Thing {
   
   // data
-  String val;
-  boolean draw;
-  
+  public String val;
+  public float margin;
+
   // Message (x, y, width, height, clr)
   // - create a message
   public Message(float x, float y, float width, float height, color clr) {
@@ -18,24 +18,22 @@ public class Message extends Thing {
     return this;
   }
   
-  // Draw (val)
-  // - set if to draw
-  public Message draw(boolean val) {
-    draw = val;
+  // Margin (val)
+  // - set margin
+  public Message margin(float val) {
+    margin = val;
     return this;
   }
   
   // Draw ()
   // - draw message
   public void draw() {
-    if(!draw) return;
     fill(clr);
-    stroke(clr-8);
-    strokeWeight(2);
+    noStroke();
     rect(x, y, width, height);
     if(val == null) return;
-    fill(~clr);
-    text(val, x, y, width, height);
+    fill(clr ^ 0xFFFFFF);
+    text(val, x, y, width-margin, height-margin);
   }
 }
 

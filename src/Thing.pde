@@ -2,10 +2,10 @@
 public class Thing {
   
   // data
-  float x, y;
-  float width, height;
+  public float x, y;
+  public float width, height;
+  public color clr;
   float x0, y0, x1, y1;
-  color clr;
   boolean ranged;
   
   // Thing (x, y)

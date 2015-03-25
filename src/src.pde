@@ -11,7 +11,7 @@ void setup() {
 
 void draw() {
   background(255);
-  Thing t = new Message(mouseX, mouseY, 30, 20, 100).val("Hello").draw(true);
+  Thing t = new Message(mouseX, mouseY, 40, 30, color(240)).val("Hello").margin(8);
   t.draw();
 }
 
