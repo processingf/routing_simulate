@@ -32,32 +32,32 @@ public class Thing {
   // X (val)
   // - set x position
   public Thing x(float val) {
+    if(x != val) ranged = false;
     x = val;
-    ranged = false;
     return this;
   }
   
   // Y (val)
   // - set y position
   public Thing y(float val) {
+    if(y != val) ranged = false;
     y = val;
-    ranged = false;
     return this;
   }
   
   // Width (val)
   // - set width
   public Thing width(float val) {
+    if(width != val) ranged = false;
     width = val;
-    ranged = false;
     return this;
   }
   
   // Height (val)
   // - set height
   public Thing height(float val) {
+    if(height != val) ranged = false;
     height = val;
-    ranged = false;
     return this;
   }
   
