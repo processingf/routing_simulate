@@ -5,6 +5,7 @@ void setup() {
 }
 
 void draw() {
-  rect(mouseX, mouseY, 10, 10);
+  Thing t = new Thing(mouseX, mouseY, 20, 10, 100);
+  t.draw();
 }
 
