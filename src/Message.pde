@@ -2,13 +2,11 @@
 public class Message extends Thing {
   
   // data
-  public String val, type;
+  public String val;
   public float margin;
+  public Node src, dst;
   public Date start, end;
-  
-  // hops
-  // Node src;
-  // List<Node> dst;
+  public int hops;
 
   // Message (z, x, y, width, height, clr)
   // - create a message
@@ -23,17 +21,45 @@ public class Message extends Thing {
     return this;
   }
   
-  // Type (val)
-  // - set type
-  public Message type(String val) {
-    type = val;
-    return this;
-  }
-  
   // Margin (val)
   // - set margin
   public Message margin(float val) {
     margin = val;
+    return this;
+  }
+  
+  // Src (val)
+  // - set source node
+  public Message src(Node val) {
+    src = val;
+    return this;
+  }
+  
+  // Dst (val)
+  // - set destination node
+  public Message dst(Node val) {
+    dst = val;
+    return this;
+  }
+  
+  // Start (val)
+  // - set start date
+  public Message start(Date val) {
+    start = val;
+    return this;
+  }
+  
+  // End (val)
+  // - set end date
+  public Message end(Date val) {
+    end = val;
+    return this;
+  }
+  
+  // Hops (val)
+  // - set the number of hops
+  public Message hops(int val) {
+    hops = val;
     return this;
   }
   
