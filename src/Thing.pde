@@ -102,6 +102,7 @@ public class Thing {
   // Draw ()
   // - draw thing
   public void draw() {
+    if()
     fill(clr);
     rect(x, y, width, height);
   }
