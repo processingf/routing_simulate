@@ -6,6 +6,7 @@ public class Thing {
   public float x, y;
   public float width, height;
   public color clr;
+  public int state;
   float x0, y0, x1, y1;
   boolean ranged;
   
@@ -67,6 +68,11 @@ public class Thing {
   public Thing height(float val) {
     if(height != val) ranged = false;
     height = val;
+    return this;
+  }
+  
+  public Thing state(int val) {
+    state = val;
     return this;
   }
   
