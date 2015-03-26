@@ -2,8 +2,10 @@
 public class Message extends Thing {
   
   // data
-  public String val;
+  public String val, type;
   public float margin;
+  // Node src;
+  // List<Node> dst;
 
   // Message (x, y, width, height, clr)
   // - create a message
@@ -15,6 +17,13 @@ public class Message extends Thing {
   // - set value
   public Message val(String val) {
     this.val = val;
+    return this;
+  }
+  
+  // Type (val)
+  // - set type
+  public Message type(String val) {
+    type = val;
     return this;
   }
   
@@ -36,4 +45,5 @@ public class Message extends Thing {
     text(val, x, y, width-margin, height-margin);
   }
 }
+
 
