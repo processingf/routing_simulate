@@ -4,6 +4,8 @@ public class Message extends Thing {
   // data
   public String val, type;
   public float margin;
+  // srctime, dstdest
+  // hops
   // Node src;
   // List<Node> dst;
 

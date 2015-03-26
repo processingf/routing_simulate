@@ -2,9 +2,9 @@
 public class MessageList extends Thing {
   
   // data
-  List<String> list;
+  List<Message> list;
   float margin, gap;
-  boolean draw;
+  String type;
   int size;
   
   // MessageList (x, y, width, height, clr)
