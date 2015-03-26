@@ -4,15 +4,16 @@ public class Message extends Thing {
   // data
   public String val, type;
   public float margin;
-  // srctime, dstdest
+  public Date start, end;
+  
   // hops
   // Node src;
   // List<Node> dst;
 
-  // Message (x, y, width, height, clr)
+  // Message (z, x, y, width, height, clr)
   // - create a message
-  public Message(float x, float y, float width, float height, color clr) {
-    super(x, y, width, height, clr);
+  public Message(int z, float x, float y, float width, float height, color clr) {
+    super(z, x, y, width, height, clr);
   }
   
   // Val (val)
@@ -47,5 +48,4 @@ public class Message extends Thing {
     text(val, x, y, width-margin, height-margin);
   }
 }
-
 

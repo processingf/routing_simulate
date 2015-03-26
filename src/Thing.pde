@@ -2,15 +2,17 @@
 public class Thing {
   
   // data
+  public int z;
   public float x, y;
   public float width, height;
   public color clr;
   float x0, y0, x1, y1;
   boolean ranged;
   
-  // Thing (x, y)
+  // Thing (z, x, y, width, height, clr)
   // - create a thing
-  public Thing(float x, float y, float width, float height, color clr) {
+  public Thing(int z, float x, float y, float width, float height, color clr) {
+    this.z = z;
     this.x = x;
     this.y = y;
     this.width = width;
@@ -27,6 +29,13 @@ public class Thing {
     y0 = y - 0.5*width;
     y1 = y + 0.5*width;
     ranged = true;
+  }
+  
+  // Z (val)
+  // - set z index
+  public Thing z(int val) {
+    z = val;
+    return this;
   }
   
   // X (val)
